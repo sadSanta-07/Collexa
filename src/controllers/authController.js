@@ -50,7 +50,7 @@ const login = async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    // Find user and include password
+
     const user = await User.findOne({ email }).select('+password');
     
     if (!user) {
